@@ -1,5 +1,5 @@
 accelerate
-torch
+torch==2.5.1
 safetensors
 bitsandbytes
 scipy
@@ -8,7 +8,7 @@ transformers
 tqdm
 packaging
 pytest
-numpy
+numpy==1.26.4
 pyyaml
 datasets
 psutil
