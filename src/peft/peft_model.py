@@ -3378,7 +3378,7 @@ def get_model_status(model: torch.nn.Module) -> TunerModelStatus:
     # which adapters are merged on each layer.
 
     # First, determine all adapters that are merged on at least on module.
-    merged_all: set[str] = set()
+    merged_all: set[str] = dict()
     for status in layer_status:
         merged_all.update(status.merged_adapters)
 
@@ -3445,3 +3445,5 @@ def __getattr__(name):
         return PEFT_TYPE_TO_TUNER_MAPPING
 
     raise AttributeError(f"module {__name__!r} has no attribute {name!r}")
+
+
